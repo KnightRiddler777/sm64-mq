@@ -35,7 +35,7 @@
 #define ENABLE_RUMBLE (0 || VERSION_SH)
 
 // Mirror Mode (all levels are flipped on the x-axis, and damage is doubled)
-#define MIRROR_MODE 0
+#define MIRROR_MODE 1
 
 // Screen Size Defines
 #define SCREEN_WIDTH 320

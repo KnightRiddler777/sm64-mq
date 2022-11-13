@@ -1390,9 +1390,6 @@ void bhv_menu_button_manager_init(void) {
  * Also play a sound and/or render buttons depending of the button ID selected.
  */
 void check_main_menu_clicked_buttons(void) {
-#if MIRROR_MODE == 1
-    isGameFlipped = FALSE;
-#endif
 #ifdef VERSION_EU
     if (sMainMenuTimer >= 5) {
 #endif
@@ -2872,7 +2869,6 @@ Gfx *geo_invert_off(s32 callContext, UNUSED struct GraphNode *node, UNUSED Mat4 
     return NULL;
 }
 #endif
-
 /**
  * Initiates file select values after Mario Screen.
  * Relocates cursor position of the last save if the game goes back to the Mario Screen
@@ -2941,9 +2937,6 @@ s32 lvl_init_menu_values_and_cursor_pos(UNUSED s32 arg, UNUSED s32 unused) {
  * defined in load_main_menu_save_file.
  */
 s32 lvl_update_obj_and_load_file_selected(UNUSED s32 arg, UNUSED s32 unused) {
-#if MIRROR_MODE == 1
-    isGameFlipped = FALSE;
-#endif
     area_update_objects();
     return sSelectedFileNum;
 }

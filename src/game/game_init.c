@@ -667,9 +667,6 @@ void thread5_game_loop(UNUSED void *arg) {
     render_init();
 
     while (TRUE) {
-#if MIRROR_MODE == 1
-	isGameFlipped = TRUE;
-#endif
         // If the reset timer is active, run the process to reset the game.
         if (gResetTimer != 0) {
             draw_reset_bars();
