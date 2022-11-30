@@ -147,7 +147,7 @@ void yoshi_give_present_loop(void) {
 
     if (gHudDisplay.lives == 100) {
         play_sound(SOUND_GENERAL_COLLECT_1UP, gGlobalSoundSource);
-#if MIRROR_MODE == 0
+#if MIRROR_MODE != 1
 	gSpecialTripleJump = TRUE;
 #endif
         o->oAction = YOSHI_ACT_WALK_JUMP_OFF_ROOF;
