@@ -2040,7 +2040,7 @@ s32 act_special_triple_jump(struct MarioState *m) {
                 } else {
                     if (m->vel[1] > 0.0f) m->vel[1] = 0.0f;
                     if (m->forwardVel >= 38.0f) {
-                        m->particleFlags |= PARTICLE_1;
+                        m->particleFlags |= PARTICLE_DUST;
                         set_mario_action(m, ACT_BACKWARD_AIR_KB, 0);
                     } else {
                         if (m->forwardVel > 8.0f) mario_set_forward_vel(m, -8.0f);
